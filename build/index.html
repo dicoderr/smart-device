@@ -5,12 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Smart Device</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <h1>Добро пожаловать.</h1>
+  <header class="header">
+    <nav class="navigation">
+      <a class="logo" href="/">
+        <img class="logo__img" src="img/logo.svg" width="52" height="52" alt="Логотип">
+        <div class="logo__text">
+          <p>Smart Device</p>
+          <span>умные технологии</span>
+        </div>
+      </a>
+      <a href="mailto:info@sd.ru" class="navigation__link">
+        <img src="img/mail.svg" width="19" height="14" alt="Отправить письмо">
+        <p>info@sd.ru</p>
+      </a>
+      <a href="tel:74950005252" class="navigation__link">
+        <img src="img/phone.svg" alt="Позвонить">
+        <p>+7 (495) 000 52 52</p>
+      </a>
+      <button class="navigation__recall">Заказать звонок</button>
+    </nav>
+  </header>
 </body>
 
 </html>
