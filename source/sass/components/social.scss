@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+
+  list-style: none;
+}
+
+.social__icon {
+  display: block;
+  width: 26px;
+  height: 26px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: contain;
+
+  &--fb {
+    background-image: url("../../img/fb.svg");
+  }
+
+  &--vk {
+    background-image: url("../../img/vk.svg");
+  }
+
+  &--ok {
+    background-image: url("../../img/ok.svg");
+  }
+}

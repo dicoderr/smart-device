@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  &--wide {
+    max-width: 1410px;
+  }
+}
+
+
+@media (max-width: $breakpoint-desktop) {
+  .container--wide {
+    max-width: 1170px;
+  }
+}

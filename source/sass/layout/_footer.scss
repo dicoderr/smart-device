@@ -1,0 +1,302 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  color: $color-regent-gray;
+}
+
+.accordeon__header h3 {
+  color: $color-tangaroa;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.accordeon__button {
+  display: none;
+}
+
+.accordeon__content {
+  padding: 28px 0;
+}
+
+.footer__content {
+  display: flex;
+  padding: 65px 0 55px;
+}
+
+.footer__name {
+  text-transform: uppercase;
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: 208px;
+
+  .logo {
+    margin-bottom: 53px;
+  }
+
+  .footer__name {
+    display: none;
+  }
+
+  .logo__text p {
+    color: $color-nordic;
+  }
+}
+
+.accordeon {
+  display: flex;
+  width: 100%;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__nav-links {
+  display: flex;
+}
+
+.footer__nav-col {
+  margin-right: 65px;
+
+  list-style: none;
+
+  li {
+    margin-bottom: 7px;
+  }
+}
+
+.footer__nav-link {
+  color: $color-regent-gray;
+  text-decoration: none;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+.footer__bottom {
+  position: relative;
+
+  .container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+  }
+
+  p {
+    text-transform: uppercase;
+  }
+
+  .footer__name {
+    position: absolute;
+    left: 224px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $color-finlandia;
+    opacity: 0.2;
+
+    content: "";
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .footer__logo {
+    position: relative;
+
+    margin-right: 80px;
+
+    .footer__name {
+      position: absolute;
+      top: 50%;
+
+      display: block;
+
+      white-space: nowrap;
+    }
+  }
+
+  .footer__bottom .footer__name {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .footer__content {
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 33px;
+  }
+
+  .footer__logo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 19px 0 26px;
+
+    .logo {
+      margin: 0;
+    }
+
+    .footer__name {
+      position: static;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: -25px;
+
+      width: 100vw;
+      height: 1px;
+
+      background-color: $color-finlandia;
+      opacity: 0.2;
+
+      content: "";
+    }
+  }
+
+  .accordeon {
+    padding-top: 38px;
+  }
+
+  .footer__nav,
+  .footer__contacts {
+    flex: 1 0 50%;
+    margin: 0;
+  }
+
+  .footer__nav-links {
+    flex-direction: column;
+  }
+
+  .footer__rights {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .footer__logo {
+    flex-direction: column;
+    padding: 46px 0 54px;
+
+    .logo {
+      margin-bottom: 26px;
+    }
+
+    .footer__name {
+      margin-bottom: 31px;
+    }
+  }
+
+  .accordeon {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .accordeon__header {
+    display: flex;
+    align-items: center;
+  }
+
+  .accordeon__button {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    border: none;
+
+    background-color: transparent;
+    outline: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+
+      width: 16px;
+      height: 1px;
+
+      background-color: $color-regent-gray;
+
+      content: "";
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  .accordeon__panel {
+    padding-top: 28px;
+  }
+
+  .accordeon__panel:not(.active) {
+    .accordeon__content {
+      height: 0;
+      padding-top: 0;
+
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  .footer__contacts {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -25px;
+
+      width: 100vw;
+      height: 1px;
+
+      background-color: $color-finlandia;
+      opacity: 0.2;
+
+      content: "";
+    }
+  }
+
+  .footer__content {
+    padding: 0;
+  }
+
+  .footer__bottom .container {
+    flex-direction: column;
+    height: auto;
+    padding: 28px 0;
+
+    p:not(:last-child) {
+      margin-bottom: 21px;
+    }
+  }
+}
