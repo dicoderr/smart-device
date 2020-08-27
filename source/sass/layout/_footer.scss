@@ -1,11 +1,12 @@
 .footer {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   color: $color-regent-gray;
 }
 
-.accordeon__header h3 {
+.accordion__header h3 {
   color: $color-tangaroa;
   font-size: 1.5rem;
   line-height: 1.6rem;
@@ -13,11 +14,11 @@
   text-transform: uppercase;
 }
 
-.accordeon__button {
+.accordion__button {
   display: none;
 }
 
-.accordeon__content {
+.accordion__content {
   padding: 28px 0;
 }
 
@@ -50,7 +51,7 @@
   }
 }
 
-.accordeon {
+.accordion {
   display: flex;
   width: 100%;
 }
@@ -184,7 +185,7 @@
     }
   }
 
-  .accordeon {
+  .accordion {
     padding-top: 38px;
   }
 
@@ -217,20 +218,22 @@
     }
   }
 
-  .accordeon {
+  .accordion {
     flex-direction: column;
     padding: 0;
   }
 
-  .accordeon__header {
+  .accordion__header {
     display: flex;
     align-items: center;
   }
 
-  .accordeon__button {
+  .accordion__button {
+    position: relative;
+
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 21px;
+    height: 21px;
     margin-left: auto;
     border: none;
 
@@ -240,6 +243,8 @@
     &::before,
     &::after {
       position: absolute;
+      top: 10px;
+      left: 2px;
 
       width: 16px;
       height: 1px;
@@ -254,12 +259,22 @@
     }
   }
 
-  .accordeon__panel {
+  .accordion__panel {
     padding-top: 28px;
   }
 
-  .accordeon__panel:not(.active) {
-    .accordeon__content {
+  .accordion__content {
+    transition: all 0ms;
+  }
+
+  .accordion__panel.active {
+    .accordion__content {
+      transition: all 200ms ease;
+    }
+  }
+
+  .accordion__panel:not(.active) {
+    .accordion__content {
       height: 0;
       padding-top: 0;
 
