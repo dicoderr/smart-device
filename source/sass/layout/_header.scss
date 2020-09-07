@@ -1,7 +1,13 @@
 .header {
-  min-height: 650px;
+  min-height: 900px;
 
-  background: $color-tangaroa url("../../img/bg_header.png");
+  background-color: $color-tangaroa;
+  background-image:
+    url("../../img/scheme.png"),
+    url("../../img/poly.png"),
+    url("../../img/bg_header.png");
+
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 90% 60%, 85% 35%, 0 0;
+  background-size: 705px 515px, 640px 670px, cover;
 }

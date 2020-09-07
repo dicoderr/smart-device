@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+
+  padding-top: 231px;
+}
+
+.hero__title {
+  margin-bottom: 31px;
+
+  color: $color-white;
+  font-weight: bold;
+  font-size: 8rem;
+  font-family: $font-roboto-condensed;
+  line-height: 9.4rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.hero__text {
+  position: relative;
+
+  max-width: 780px;
+  margin-bottom: 37px;
+
+  padding-left: 95px;
+
+  color: $color-white;
+  font-size: 2.2rem;
+  line-height: 3.4rem;
+
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    width: 66px;
+    height: 2px;
+
+    background-color: $color-white;
+
+    content: "";
+  }
+}
+
+.hero__btn {
+  margin-left: 95px;
+  padding: 17px 28px 14px;
+  border: none;
+  border-radius: 5px;
+
+  color: $color-white;
+
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-family: $font-roboto-condensed;
+  line-height: 1.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background-color: $color-deep-sky-blue;
+  outline: none;
+  cursor: pointer;
+
+  transition: all 200ms ease;
+
+  &:hover {
+    box-shadow: 1px 1px 5px 2px rgba(80, 150, 200, 0.7);
+  }
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: -220px;
+  left: 0;
+
+  color: $color-white;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  text-decoration: none;
+
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  opacity: 0.5;
+
+  transition: all 200ms ease;
+
+  &:hover {
+    color: $color-regent-gray;
+  }
+}
