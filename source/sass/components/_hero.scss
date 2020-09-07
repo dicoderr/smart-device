@@ -66,6 +66,10 @@
   &:hover {
     box-shadow: 1px 1px 5px 2px rgba(80, 150, 200, 0.7);
   }
+
+  span:last-child {
+    display: none;
+  }
 }
 
 .hero__scroll {
@@ -86,5 +90,68 @@
 
   &:hover {
     color: $color-regent-gray;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .hero {
+    padding-top: 116px;
+    padding-left: 88px;
+  }
+
+  .hero__title {
+    max-width: 400px;
+
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+
+  .hero__text {
+    max-width: 410px;
+    padding-left: 60px;
+
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+
+    &::before {
+      width: 33px;
+    }
+  }
+
+  .hero__btn {
+    margin-left: 60px;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .hero {
+    padding: 231px 15px 0;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+    line-height: 4.7rem;
+  }
+
+  .hero__text {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+
+  .hero__btn {
+    width: 100%;
+    margin: 0;
+
+    span:first-child {
+      display: none;
+    }
+
+    span:last-child {
+      display: initial;
+    }
   }
 }

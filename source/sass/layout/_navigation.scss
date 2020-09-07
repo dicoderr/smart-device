@@ -66,3 +66,13 @@
     display: none;
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .navigation {
+    padding-top: 17px;
+  }
+
+  .navigation .logo__text {
+    display: none;
+  }
+}

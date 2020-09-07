@@ -11,3 +11,21 @@
   background-position: 90% 60%, 85% 35%, 0 0;
   background-size: 705px 515px, 640px 670px, cover;
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .header {
+    min-height: 690px;
+
+    background-position: 175% 40%, 150% 0, 0 0;
+    background-size: 60.3vw 44.2vw, 60.5vw 60.5vw, cover;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .header {
+    min-height: 650px;
+
+    background-position: 80% 25%, 55vw -10%, 0 0;
+    background-size: 301px 220px, 452px 471px, cover;
+  }
+}
