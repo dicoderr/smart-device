@@ -82,6 +82,12 @@ gulp.task('html', function () {
       .pipe(gulp.dest('build'));
 });
 
+gulp.task('copyjs', function () {
+  return gulp
+      .src('node_modules/svg4everybody/dist/svg4everybody.min.js')
+      .pipe(gulp.dest('build/js'));
+});
+
 gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
@@ -98,5 +104,5 @@ gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html'));
+gulp.task('build', gulp.series('clean', 'copy', 'copyjs', 'css', 'sprite', 'html'));
 gulp.task('start', gulp.series('build', 'server'));
