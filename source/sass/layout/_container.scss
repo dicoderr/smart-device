@@ -15,3 +15,9 @@
     max-width: 1170px;
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .container {
+    padding: 0 15px;
+  }
+}

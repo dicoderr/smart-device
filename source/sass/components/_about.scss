@@ -1,0 +1,76 @@
+.about {
+  padding: 80px 0 110px;
+
+  .container {
+    padding-left: 210px;
+  }
+}
+
+.about__title {
+  position: relative;
+
+  margin: 0 0 18px;
+
+  color: $color-dim-gray;
+  font-size: 3.6rem;
+  font-family: $font-roboto-condensed;
+  line-height: 5.1rem;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -210px;
+
+    width: 220px;
+    height: 317px;
+
+    background: url("../../img/2005.png") no-repeat;
+
+    content: "";
+  }
+}
+
+.about__text {
+  margin: 0 0 32px;
+
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.about__more {
+  padding: 8px 32px;
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 5px;
+
+  color: $color-deep-sky-blue;
+  font-size: 1.4rem;
+  font-family: $font-roboto-condensed;
+  line-height: 1.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: all 200ms ease;
+
+  &:hover {
+    color: $color-white;
+
+    background-color: $color-deep-sky-blue;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .about {
+    padding: 60px 0;
+
+    .container {
+      padding-left: 15px;
+    }
+  }
+
+  .about__title {
+    &::before {
+      display: none;
+    }
+  }
+}
