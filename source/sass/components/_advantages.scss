@@ -1,5 +1,13 @@
 .advantages {
+  margin-bottom: -500px;
   padding-top: 109px;
+  padding-bottom: 500px;
+
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
 }
 
 .advantages__list {
@@ -7,7 +15,56 @@
   flex-wrap: wrap;
 }
 
+.advantages__triangle {
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &--small {
+    width: 234px;
+    height: 261px;
+
+    background-image: url("../../img/triangle_small.svg");
+  }
+
+  &--big {
+    width: 826px;
+    height: 907px;
+
+    background-image: url("../../img/triangle_big.png");
+  }
+
+  &--1 {
+    top: 0;
+    left: -100px;
+  }
+
+  &--2 {
+    top: 380px;
+    right: -220px;
+
+    transform: rotate(180deg);
+  }
+
+  &--3 {
+    top: 420px;
+    left: -640px;
+
+    transform: rotate(180deg);
+  }
+
+  &--4 {
+    top: 130px;
+    left: 20%;
+  }
+}
+
 .advantage {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   flex: 1 0 calc(50% - 15px);
   flex-direction: column;
@@ -18,6 +75,8 @@
   padding: 40px 40px 24px 44px;
   border: 1px solid $color-whisper;
   border-left: 3px solid $color-deep-sky-blue;
+
+  background-color: $color-white;
 
   transition: all 200ms ease;
 
@@ -70,6 +129,12 @@
     padding-top: 54px;
   }
 
+  .advantages__triangle {
+    &--4 {
+      left: 30%;
+    }
+  }
+
   .advantage {
     padding: 24px;
   }
@@ -78,6 +143,13 @@
 @media (max-width: $breakpoint-mobile) {
   .advantages {
     padding-top: 37px;
+  }
+
+  .advantages__triangle {
+    &--4 {
+      top: 65%;
+      left: -30%;
+    }
   }
 
   .advantage {
