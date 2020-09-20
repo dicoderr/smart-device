@@ -38,6 +38,11 @@
           консультация</span></button>
       <a href="#" class="hero__scroll">Скролл вниз</a>
     </section>
+
+    <div class="modal header__modal" id="modal">
+      <div class="modal__veil"></div>
+      <div class="modal__content"></div>
+    </div>
   </header>
 
   <section class="advantages">
@@ -162,7 +167,7 @@
         <img class="feedback__airplane" src="img/airplane.png" alt="Бумажый самолетик" width="511" height="288">
       </div>
       <div class="feedback__form">
-        <div class="form">
+        <div class="form" id="form">
           <p class="form__title">Остались вопросы? Задайте их нам!</p>
           <p class="form__subtitle">Мы проконсультируем Вас бесплатно</p>
           <form action="https://httpbin.org" method="POST">
@@ -174,7 +179,7 @@
               <label for="" class="form__text"><textarea name="question" placeholder="Ваш вопрос"></textarea></label>
             </div>
             <div class="form__row">
-              <button type="submit">Задать вопрос</button>
+              <button class="form__btn" type="submit">Задать вопрос</button>
               <label class="form__check">
                 <input type="checkbox" class="visually-hidden">
                 <span></span>

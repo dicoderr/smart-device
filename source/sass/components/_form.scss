@@ -29,14 +29,14 @@
   margin: 0 0 40px;
 }
 
-.form button,
+.form__btn,
 .form label,
 .form__check,
 .form__text {
   width: 100%;
 }
 
-.form button,
+.form__btn,
 .form__input,
 .form__check {
   max-width: calc(50% - 15px);
@@ -95,7 +95,7 @@
   }
 }
 
-.form button {
+.form__btn {
   padding: 16px 0;
   border: 1px solid $color-white;
   border-radius: 5px;
@@ -173,7 +173,53 @@
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
+.form__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 24px;
+  height: 24px;
+  border: none;
+
+  background-color: transparent;
+
+  outline: none;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+    border-radius: 5px;
+
+    background-color: $color-white;
+
+    content: "";
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $color-regent-gray;
+    }
+  }
+}
+
+@mixin mobile-form {
   .form__row {
     flex-direction: column;
     margin-bottom: 0;
@@ -181,7 +227,7 @@
 
   .form__input,
   .form__text,
-  .form button,
+  .form__btn,
   .form__check {
     max-width: 100%;
     margin-bottom: 30px;
@@ -193,5 +239,15 @@
 
   .form__check span {
     top: 0;
+  }
+}
+
+.form.mobile {
+  @include mobile-form;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .form {
+    @include mobile-form;
   }
 }

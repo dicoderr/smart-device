@@ -12,6 +12,13 @@
   background-size: 705px 515px, 640px 670px, cover;
 }
 
+.header__modal .form {
+  max-width: 490px;
+  padding: 33px 40px;
+
+  background-color: $color-deep-sky-blue;
+}
+
 @media (max-width: $breakpoint-tablet) {
   .header {
     min-height: 690px;
