@@ -127,7 +127,7 @@
   margin: auto 0;
   padding-left: 40px;
 
-  p {
+  span {
     margin: 0;
 
     font-size: 1.4rem;
@@ -136,7 +136,7 @@
     opacity: 0.8;
   }
 
-  span {
+  i {
     position: absolute;
     top: 8px;
     left: 8px;
@@ -167,7 +167,7 @@
     }
   }
 
-  input:checked ~ span::after {
+  input:checked ~ i::after {
     transform: rotate(45deg) scale(1);
     opacity: 1;
   }
@@ -237,7 +237,7 @@
     min-height: 104px;
   }
 
-  .form__check span {
+  .form__check i {
     top: 0;
   }
 }

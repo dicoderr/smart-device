@@ -46,10 +46,11 @@
   </header>
 
   <section class="advantages">
+    <h2 class="visually-hidden">Преимущества</h2>
     <div class="container">
       <ul class="advantages__list">
         <li class="advantage">
-          <svg role="img" title="Оперативные сроки" width="29" height="35">
+          <svg role="img" aria-label="Оперативные сроки" width="29" height="35">
             <use href="img/icons.svg#stopwatch"></use>
           </svg>
           <p class="advantage__title">Оперативные сроки</p>
@@ -57,7 +58,7 @@
             производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
         </li>
         <li class="advantage">
-          <svg role="img" title="Крупные поставщики" width="35" height="35">
+          <svg role="img" aria-label="Крупные поставщики" width="35" height="35">
             <use href="img/icons.svg#hired"></use>
           </svg>
           <p class="advantage__title">Крупные поставщики</p>
@@ -65,14 +66,14 @@
             HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
         </li>
         <li class="advantage">
-          <svg role="img" title="Полная конфиденциальность" width="36" height="31">
+          <svg role="img" aria-label="Полная конфиденциальность" width="36" height="31">
             <use href="img/icons.svg#detective"></use>
           </svg>
           <p class="advantage__title">Полная конфиденциальность</p>
           <p class="advantage__text">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
         </li>
         <li class="advantage">
-          <svg role="img" title="Персонализация стоимости" width="35" height="35">
+          <svg role="img" aria-label="Персонализация стоимости" width="35" height="35">
             <use href="img/icons.svg#tag"></use>
           </svg>
           <p class="advantage__title">Персонализация стоимости</p>
@@ -105,6 +106,7 @@
   </section>
 
   <section class="offers">
+    <h2 class="visually-hidden">Товары и услуги</h2>
     <div class="container">
       <div class="offers__title">Service Device предлагает следующие товары и услуги</div>
       <ul class="offers__list">
@@ -119,7 +121,7 @@
             <picture>
               <source srcset="img/prod_sm.png" media="(max-width: 767px)">
               <source srcset="img/prod_md.png" media="(max-width: 1023px)">
-              <img srcset="img/prod_lg.png" alt="" width="370" height="620">
+              <img src="img/prod_lg.png" alt="Производство печатных плат" width="370" height="620">
             </picture>
           </div>
         </li>
@@ -134,7 +136,7 @@
             <picture>
               <source srcset="img/assemble_sm.png" media="(max-width: 767px)">
               <source srcset="img/assemble_md.png" media="(max-width: 1023px)">
-              <img srcset="img/assemble_lg.png" alt="" width="370" height="620">
+              <img src="img/assemble_lg.png" alt="Монтаж печатных плат" width="370" height="620">
             </picture>
           </div>
         </li>
@@ -149,7 +151,7 @@
             <picture>
               <source srcset="img/components_sm.png" media="(max-width: 767px)">
               <source srcset="img/components_md.png" media="(max-width: 1023px)">
-              <img srcset="img/components_lg.png" alt="" width="370" height="620">
+              <img src="img/components_lg.png" alt="Комплектующие" width="370" height="620">
             </picture>
           </div>
         </li>
@@ -158,12 +160,13 @@
   </section>
 
   <section class="feedback">
+    <h2 class="visually-hidden">Обратная связь</h2>
     <div class="container">
       <div class="feedback__img">
-        <img class="feedback__triangle feedback__triangle1" src="img/triangle_white_dotted1.png" width="640" height="640">
-        <img class="feedback__triangle feedback__triangle2" src="img/triangle_white_dotted2.png" width="375" height="375">
-        <img class="feedback__triangle feedback__triangle3" src="img/triangle_white.svg" width="200" height="200">
-        <img class="feedback__triangle feedback__triangle4" src="img/triangle_white.svg" width="250" height="250">
+        <img class="feedback__triangle feedback__triangle1" src="img/triangle_white_dotted1.png" width="640" height="640" alt="Полигон">
+        <img class="feedback__triangle feedback__triangle2" src="img/triangle_white_dotted2.png" width="375" height="375" alt="Полигон">
+        <img class="feedback__triangle feedback__triangle3" src="img/triangle_white.svg" width="200" height="200" alt="Полигон">
+        <img class="feedback__triangle feedback__triangle4" src="img/triangle_white.svg" width="250" height="250" alt="Полигон">
         <img class="feedback__airplane" src="img/airplane.png" alt="Бумажый самолетик" width="511" height="288">
       </div>
       <div class="feedback__form">
@@ -172,18 +175,18 @@
           <p class="form__subtitle">Мы проконсультируем Вас бесплатно</p>
           <form action="https://httpbin.org" method="POST">
             <div class="form__row">
-              <label for="" class="form__input"><input type="text" name="name" placeholder="Имя"></label>
-              <label for="" class="form__input"><input type="tel" name="tel" placeholder="Телефон"></label>
+              <label class="form__input"><input type="text" name="name" placeholder="Имя"></label>
+              <label class="form__input"><input type="tel" name="tel" placeholder="Телефон"></label>
             </div>
             <div class="form__row">
-              <label for="" class="form__text"><textarea name="question" placeholder="Ваш вопрос"></textarea></label>
+              <label class="form__text"><textarea name="question" placeholder="Ваш вопрос"></textarea></label>
             </div>
             <div class="form__row">
               <button class="form__btn" type="submit">Задать вопрос</button>
               <label class="form__check">
                 <input type="checkbox" class="visually-hidden">
-                <span></span>
-                <p>Я согласен на обработку персональных данных</p>
+                <span>Я согласен на обработку персональных данных</span>
+                <i></i>
               </label>
             </div>
           </form>
